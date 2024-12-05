@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+
+        
+<!-- Pop-up Notification -->
+    <div id="popup" class="popup">
+     <div class="popup-content">
+        <span class="popup-close">&times;</span>
+        <p id="popupMessage"></p>
+        <button id="popupOkButton">OK</button>
+     </div>
+    </div>
+
+
+        <!-- Add Employee Form -->
+        <h2>Add Employee</h2>
+        <form id="addEmployeeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="Enter Phone" required>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" placeholder="Enter Department" required>
+            
+            <button type="submit">Add Employee</button>
+        </form>
+
+        <!-- Edit Employee Form (Hidden by Default) -->
+        <h2>Edit Employee</h2>
+        <form id="editEmployeeForm" style="display: none;">
+            <input type="hidden" id="editEmployeeId">
+            
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" placeholder="Enter Name" required>
+            
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" placeholder="Enter Email" required>
+            
+            <label for="editPhone">Phone:</label>
+            <input type="text" id="editPhone" placeholder="Enter Phone" required>
+            
+            <label for="editDepartment">Department:</label>
+            <input type="text" id="editDepartment" placeholder="Enter Department" required>
+            
+            <button type="submit">Update Employee</button>
+        </form>
+
+        <!-- Search Bar -->
+        <h2>Search Employees</h2>
+        <input type="text" id="searchBar" placeholder="Search by Name or Department">
+
+        <!-- Employee Table -->
+        <h2>Employee List</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <!-- Employee Rows Will Be Dynamically Inserted -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
